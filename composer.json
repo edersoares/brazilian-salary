@@ -1,0 +1,22 @@
+{
+    "name": "edersoares/brazilian-salary",
+    "description": "Package about salaries in Brazil",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eder Soares",
+            "email": "edersoares@me.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Brazilian\\Salary\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Brazilian\\Salary\\Test\\": "tests/"
+        }
+    }
+}
