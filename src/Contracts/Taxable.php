@@ -2,15 +2,8 @@
 
 namespace Brazilian\Salary\Contracts;
 
-interface Taxable extends Valuable
+interface Taxable extends Aliquot, Valuable
 {
-    /**
-     * Return the aliquot.
-     *
-     * @return float
-     */
-    public function getAliquot();
-
     /**
      * Return the base value.
      *
