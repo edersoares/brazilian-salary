@@ -97,7 +97,7 @@ class IrrfCalculator implements TaxCalculator
     {
         $inss = $this->inssCalculator->calculate($value);
 
-        return $value->getValue() - $inss->getValue();
+        return round($value->getValue() - $inss->getValue(), 2);
     }
 
     /**
@@ -113,7 +113,7 @@ class IrrfCalculator implements TaxCalculator
         $aliquot = $this->getAliquot($baseValue);
         $deductibleQuote = $this->getDeductibleQuote($baseValue);
 
-        $irrfValue = $baseValue * $aliquot / 100 - $deductibleQuote;
+        $irrfValue = round($baseValue * $aliquot / 100 - $deductibleQuote, 2);
 
         return new Irrf($irrfValue, $baseValue, $aliquot);
     }

@@ -48,7 +48,7 @@ class InssCalculator implements TaxCalculator
             $baseValue = $value->getValue()
         );
 
-        $inssValue = $baseValue * $aliquot / 100;
+        $inssValue = round($baseValue * $aliquot / 100, 2);
 
         if ($inssValue >= 621.04) {
             $inssValue = 621.04;

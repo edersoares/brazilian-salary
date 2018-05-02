@@ -26,7 +26,7 @@ class FgtsCalculator implements TaxCalculator
     public function calculate(Valuable $value)
     {
         $baseValue = $value->getValue();
-        $fgtsValue = $baseValue * $this->aliquot / 100;
+        $fgtsValue = round($baseValue * $this->aliquot / 100, 2);
 
         return new Fgts($fgtsValue, $baseValue, $this->aliquot);
     }
