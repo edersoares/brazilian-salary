@@ -50,6 +50,10 @@ class InssCalculator implements TaxCalculator
 
         $inssValue = $baseValue * $aliquot / 100;
 
+        if ($inssValue >= 621.04) {
+            $inssValue = 621.04;
+        }
+
         return new Inss($inssValue, $baseValue, $aliquot);
     }
 }
