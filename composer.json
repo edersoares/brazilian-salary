@@ -23,7 +23,7 @@
         "phpunit/phpunit": "^7.1"
     },
     "scripts": {
-        "phpunit": "vendor/bin/phpunit tests --color=always",
+        "phpunit": "vendor/bin/phpunit",
         "phpcs": "vendor/bin/phpcs",
         "phpcbf": "vendor/bin/phpcbf"
     },
