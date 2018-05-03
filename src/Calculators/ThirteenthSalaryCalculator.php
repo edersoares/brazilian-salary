@@ -13,7 +13,7 @@ class ThirteenthSalaryCalculator implements Calculator
      *
      * @param Valuable $value
      *
-     * @return Valuable
+     * @return ThirteenthSalary
      */
     public function calculate(Valuable $value)
     {

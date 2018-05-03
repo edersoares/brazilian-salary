@@ -13,7 +13,7 @@ class AdditionalVacationCalculator implements Calculator
      *
      * @param Valuable $value
      *
-     * @return Valuable
+     * @return AdditionalVacation
      */
     public function calculate(Valuable $value)
     {
