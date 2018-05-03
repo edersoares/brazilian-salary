@@ -1,15 +1,10 @@
 <?xml version="1.0"?>
 <ruleset name="Brazilian Salary">
-
     <description>Brazilian Salary Coding Standards</description>
-
     <file>src</file>
     <file>tests</file>
-
     <arg name="colors" />
     <arg value="p"/>
-
     <rule ref="PSR1"/>
     <rule ref="PSR2"/>
-
 </ruleset>
