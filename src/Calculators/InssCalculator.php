@@ -40,7 +40,7 @@ class InssCalculator implements TaxCalculator
      *
      * @param Valuable $value
      *
-     * @return Taxable
+     * @return Inss
      */
     public function calculate(Valuable $value)
     {

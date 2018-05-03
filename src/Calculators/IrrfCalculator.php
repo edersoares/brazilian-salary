@@ -105,7 +105,7 @@ class IrrfCalculator implements TaxCalculator
      *
      * @param Valuable $value
      *
-     * @return Taxable
+     * @return Irrf
      */
     public function calculate(Valuable $value)
     {
