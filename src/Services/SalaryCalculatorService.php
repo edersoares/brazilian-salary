@@ -10,11 +10,15 @@ use Brazilian\Salary\Salary;
 class SalaryCalculatorService
 {
     /**
+     * INSS calculator.
+     *
      * @var InssCalculator
      */
     protected $inss;
 
     /**
+     * IRRF calculator.
+     *
      * @var IrrfCalculator
      */
     protected $irrf;
@@ -32,16 +36,23 @@ class SalaryCalculatorService
     }
 
     /**
-     * @param $value
+     * Calculate the net salary value.
+     *
+     * @param float $value
+     *
+     * @return NetSalaryCalculated
      */
     public function calculateNetSalary($value)
     {
         $salary = new Salary($value);
+
         $inss = $this->inss->calculate($salary);
         $irrf = $this->irrf->calculate($salary);
 
         return new NetSalaryCalculated(
-            $salary, $inss, $irrf
+            $salary,
+            $inss,
+            $irrf
         );
     }
 }

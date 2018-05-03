@@ -7,16 +7,22 @@ use Brazilian\Salary\Contracts\Valuable;
 class NetSalaryCalculated implements Valuable
 {
     /**
+     * Salary.
+     *
      * @var Salary
      */
     protected $salary;
 
     /**
+     * INSS.
+     *
      * @var Inss
      */
     protected $inss;
 
     /**
+     * IRRF.
+     *
      * @var Irrf
      */
     protected $irrf;
@@ -36,6 +42,8 @@ class NetSalaryCalculated implements Valuable
     }
 
     /**
+     * Return the salary.
+     *
      * @return Salary
      */
     public function getSalary()
@@ -44,6 +52,8 @@ class NetSalaryCalculated implements Valuable
     }
 
     /**
+     * Return the INSS.
+     *
      * @return Inss
      */
     public function getInss()
@@ -52,6 +62,8 @@ class NetSalaryCalculated implements Valuable
     }
 
     /**
+     * Return the IRRF.
+     *
      * @return Irrf
      */
     public function getIrrf()
@@ -60,7 +72,7 @@ class NetSalaryCalculated implements Valuable
     }
 
     /**
-     * Return the value.
+     * Return the net salary value.
      *
      * @return float
      */
