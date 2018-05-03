@@ -2,14 +2,14 @@
 
 namespace Brazilian\Salary\Contracts;
 
-interface TaxCalculator extends Calculator
+interface Calculator
 {
     /**
-     * Calculate a tax based on value.
+     * Calculate based on value.
      *
      * @param Valuable $value
      *
-     * @return Taxable
+     * @return Valuable
      */
     public function calculate(Valuable $value);
 }
