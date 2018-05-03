@@ -2,7 +2,6 @@
 
 namespace Brazilian\Salary\Calculators;
 
-use Brazilian\Salary\Contracts\Taxable;
 use Brazilian\Salary\Contracts\TaxCalculator;
 use Brazilian\Salary\Contracts\Valuable;
 use Brazilian\Salary\Fgts;
@@ -21,7 +20,7 @@ class FgtsCalculator implements TaxCalculator
      *
      * @param Valuable $value
      *
-     * @return Taxable
+     * @return Fgts
      */
     public function calculate(Valuable $value)
     {
