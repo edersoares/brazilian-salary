@@ -26,6 +26,11 @@
     "scripts": {
         "phpunit": "vendor/bin/phpunit",
         "phpcs": "vendor/bin/phpcs",
-        "phpcbf": "vendor/bin/phpcbf"
+        "phpcbf": "vendor/bin/phpcbf",
+        "tests": [
+            "@phpunit",
+            "@phpcs",
+            "@phpcbf"
+        ]
     }
 }
