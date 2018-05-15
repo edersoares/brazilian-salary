@@ -2,8 +2,12 @@
 
 namespace Brazilian\Salary\Test\Integration;
 
+use Brazilian\Salary\Calculators\AdditionalVacationCalculator;
+use Brazilian\Salary\Calculators\FgtsCalculator;
 use Brazilian\Salary\Calculators\InssCalculator;
 use Brazilian\Salary\Calculators\IrrfCalculator;
+use Brazilian\Salary\Calculators\ThirteenthSalaryCalculator;
+use Brazilian\Salary\Calculators\VacationCalculator;
 use Brazilian\Salary\Inss;
 use Brazilian\Salary\Irrf;
 use Brazilian\Salary\NetSalaryCalculated;
@@ -17,7 +21,12 @@ class SalaryCalculatorServiceIntegrationTest extends TestCase
     {
         $inss = new InssCalculator();
         $irrf = new IrrfCalculator($inss);
-        $service = new SalaryCalculatorService($inss, $irrf);
+        $fgts = new FgtsCalculator();
+        $thirteenth = new ThirteenthSalaryCalculator();
+        $vacation = new VacationCalculator();
+        $additionalVacation = new AdditionalVacationCalculator();
+
+        $service = new SalaryCalculatorService($inss, $irrf, $fgts, $thirteenth, $vacation, $additionalVacation);
 
         $netSalary = $service->calculateNetSalary(5000);
 
