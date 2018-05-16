@@ -30,8 +30,8 @@
         "phpcbf": "vendor/bin/phpcbf",
         "tests": [
             "@phpunit",
-            "@phpcs",
-            "@phpcbf"
+            "@phpcbf",
+            "@phpcs"
         ]
     }
 }
