@@ -12,7 +12,10 @@
     "autoload": {
         "psr-4": {
             "Brazilian\\Salary\\": "src/"
-        }
+        },
+        "files": [
+            "helpers/calculators.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
