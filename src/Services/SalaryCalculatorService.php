@@ -58,28 +58,15 @@ class SalaryCalculatorService
 
     /**
      * SalaryCalculatorService constructor.
-     *
-     * @param InssCalculator               $inss
-     * @param IrrfCalculator               $irrf
-     * @param FgtsCalculator               $fgts
-     * @param ThirteenthSalaryCalculator   $thirteenth
-     * @param VacationCalculator           $vacation
-     * @param AdditionalVacationCalculator $additionalVacation
      */
-    public function __construct(
-        InssCalculator $inss,
-        IrrfCalculator $irrf,
-        FgtsCalculator $fgts,
-        ThirteenthSalaryCalculator $thirteenth,
-        VacationCalculator $vacation,
-        AdditionalVacationCalculator $additionalVacation
-    ) {
-        $this->inss = $inss;
-        $this->irrf = $irrf;
-        $this->fgts = $fgts;
-        $this->thirteenth = $thirteenth;
-        $this->vacation = $vacation;
-        $this->additionalVacation = $additionalVacation;
+    public function __construct()
+    {
+        $this->inss = new InssCalculator();
+        $this->irrf = new IrrfCalculator($this->inss);
+        $this->fgts = new FgtsCalculator();
+        $this->thirteenth = new ThirteenthSalaryCalculator();
+        $this->vacation = new VacationCalculator();
+        $this->additionalVacation = new AdditionalVacationCalculator();
     }
 
     /**

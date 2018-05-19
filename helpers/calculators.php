@@ -2,6 +2,8 @@
 
 namespace Brazilian\Salary;
 
+use Brazilian\Salary\Services\SalaryCalculatorService;
+
 if (false === function_exists('annual')) {
 
     /**
@@ -13,9 +15,7 @@ if (false === function_exists('annual')) {
      */
     function annual($value)
     {
-        $service = Services\Factory::salaryCalculatorService();
-
-        return $service->calculateAnnualNetSalary($value);
+        return (new SalaryCalculatorService())->calculateAnnualNetSalary($value);
     }
 }
 
@@ -30,8 +30,6 @@ if (false === function_exists('monthly')) {
      */
     function monthly($value)
     {
-        $service = Services\Factory::salaryCalculatorService();
-
-        return $service->calculateNetSalary($value);
+        return (new SalaryCalculatorService())->calculateNetSalary($value);
     }
 }
